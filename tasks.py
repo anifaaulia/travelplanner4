@@ -22,7 +22,7 @@ class TravelTasks:
             **Description**: Expand the city guide into a per-day travel itinerary with detailed 
                 per-day plans, including weather forecasts, places to eat, packing suggestions, 
                 and a budget breakdown. You MUST suggest actual places to visit, 
-                If available use Horison Hotel at {self.city} to stay else use provided accomodation,
+                If available use  Hotel at {self.city} to stay else use provided accomodation,
                 and actual restaurants to go to. This itinerary should cover all aspects of the trip, 
                 from arrival to departure, integrating the city guide information with practical travel logistics.
 
@@ -73,9 +73,8 @@ class TravelTasks:
         description=
             f"""
                 **Task**: Gather In-depth City Accommodation Information
-                **Description**: First, search for Horison Hotel in {self.city}. If Horison Hotel is found, gather 
-                    its address, estimated price, and amenities. Explain detail location. If Horison Hotel is NOT available in {self.city}, 
-                    then search for another hotel, and gather its address, price, and amenities.
+                **Description**: First, search for 3 Hotel in {self.city}. If   Hotel is found, gather 
+                    its address, estimated price, and amenities. Explain detail location. recomend me from cheap to expensive price.
 
                 **Parameters**: 
                 - Origin: {self.origin}
@@ -89,12 +88,9 @@ class TravelTasks:
         agent=Agents().accomodation_expert(),
         expected_output=(
             """
-            output -> Must return Horison Hotel details (location, price, amenities) if available. 
-            If Horison Hotel is not available, search for another hotel and return its details (location, price, amenities).
-            task -> Search Horison Hotel in the city. If available, return Horison Hotel. 
-            If not, search for another hotel, and return its address, price, and amenities.               
-            Provide comprehensive detailed information about the address, estimated price, and amenities of the 
-            Hotel recommendation.
+            output -> Must return   Hotel details (location, price, amenities) if available. 
+            If   Hotel is not available, search for another hotel and return its details (location, price, amenities).
+            task -> Search   Hotel in the city.
             """
         ),
         tools=[tavily_tool],

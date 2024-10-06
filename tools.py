@@ -12,6 +12,6 @@ def load_api_key():
 load_dotenv()
 os.environ['TAVILY_API_KEY'] = os.getenv('TAVILY_API_KEY')
 
-#web_tool = WebsiteSearchTool(website='https://myhorison.com/v2/webhome/searchhotel')
+#web_tool = WebsiteSearchTool(website='https://my .com/v2/webhome/searchhotel')
 tavily_tool = TavilySearchResults(k=5)
 search_tool = DuckDuckGoSearchRun()

@@ -54,9 +54,9 @@ class Agents:
     def accomodation_expert(self):
         accomodationdata = Agent(role='Accomodation Selection Expert',
                                goal=""" Choose the best accommodation based on price and traveler interest. You should 
-                                        recommend me Horison Hotel, if it is in this city, and give me five other hotel 
+                                        recommend me 3 Hotel from cheap to expensive price , if it is in this city, and give me five other hotel 
                                         recommendations. """, 
-                               backstory="""Expert accomodation provider from Horison Hotel have decades experience as hotel data 
+                               backstory="""Expert accomodation provider from Hotel have decades experience as hotel data 
                                             providers in other several accomodation providers localy or international.""", 
                                allow_delegation=False, 
                                verbose=True, 
